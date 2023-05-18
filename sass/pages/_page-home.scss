@@ -5,7 +5,7 @@
     .slide-thumbnail {
         position: absolute;
         top: 24.1rem;
-        left: 8%;
+        left: calc(50% - 66.5rem);
         z-index: 2;
         .swiper-wrapper {
             height: 32rem;
@@ -210,9 +210,14 @@
         }
     }
 
-    @include responsive(1200px){
+    @include responsive(1440px){
         .slide-thumbnail{
-            left: 1%
+            left: calc(50% - 62.3rem);
+        }
+    }
+    @include responsive(1245px){
+        .slide-thumbnail{
+            left: 1%;
         }
     }
     @include responsive(991px){
