@@ -9,6 +9,8 @@ Bem-vindo ao projeto de redesign do site da Blizzard! Este projeto foi desenvolv
 
 Neste projeto, tivemos a oportunidade de dar uma nova vida ao site da Blizzard, uma renomada empresa de jogos. Utilizamos as mais recentes tecnologias web para criar um redesign moderno, responsivo e atraente. O objetivo era trabalhar nossos conhecimentos adquirido até o momento no curso, e abordar os conceitos ensinados sobre o Gerenciador de Tarefas Gulp.
 
+👉 Link do projeto: <a href="https://kevin7um.github.io/projeto-blizzard/">projeto-blizzard</a>
+
 ## Recursos Implementados
 
 - **HTML5**: Utilizamos marcação semântica e estruturada para construir a base do site, garantindo uma experiência acessível e amigável aos motores de busca.
