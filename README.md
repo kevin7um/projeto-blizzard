@@ -1,6 +1,9 @@
-# Redesign do Site da Blizzard
+# Site da Blizzard
+Bem-vindo ao projeto de redesign do site da Blizzard! Este projeto foi desenvolvido como parte do curso de front-end do Codebost, onde exploramos o mundo do desenvolvimento web e colocamos em prática nossas habilidades com HTML, CSS, SASS, JavaScript dentre outras tecnologias.
 
-Bem-vindo ao projeto de redesign do site da Blizzard! Este projeto foi desenvolvido como parte do curso de front-end do Codebost, onde exploramos o mundo do desenvolvimento web e colocamos em prática nossas habilidades com HTML, SASS e JavaScript.
+<div align="center">
+  <img src="https://github.com/kevin7um/projeto-blizzard/assets/60854141/3db3be4a-0613-44e0-a77b-981a02f40111" alt="Imagem do Projeto"/>
+</div>
 
 ## Descrição do Projeto
 
