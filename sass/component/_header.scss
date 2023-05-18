@@ -1,0 +1,335 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 9.6rem;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+    
+    .container{ 
+        @include flex(row, center, space-between); 
+        height: 100%;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            bottom: 0;
+            width: 4.3rem;
+            border: 2px solid $brand-colors-primary-default;
+        }
+    }
+
+    .left-area{
+        @include flex(row, center, flex-start);
+
+        nav{
+            margin-left: 11.2rem;
+            ul{
+                @include flex(row, center, flex-start);
+                
+                li{
+                    &:not(:first-child){
+                        margin-left: 3.6rem;
+                    }
+
+                    a{
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+                        font-size: 1.4rem;
+                        line-height: 2.1rem;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        img{
+                            margin-left: 1.4rem;
+                            transition: transform .3s;
+                        }
+
+                        &.active{
+                            color: $brand-colors-primary-default;
+
+                            img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right-area{
+        @include flex(row, center, flex-end);
+
+        .btn + .btn{
+            margin-left: 1.6rem;
+        }
+
+        .btn-mobile{
+            display: none;
+            margin-left: 8.9rem ;
+            cursor: pointer;
+        }
+    }
+
+    .menu-mobile{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        display: none;
+
+        .overlay-mobile{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+            background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.52) 19.35%, rgba(14, 17, 23, 0.5) 10%);
+            backdrop-filter: blur(6px);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            
+        }
+
+        .nav-menu-mobile{
+            overflow-x: scroll;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100vh;
+            background: $neutral---200;
+            padding: 4rem 1rem;
+            z-index: 2024;
+
+            transform: translateX(-100%);
+            transition: transform .3s;
+
+            .logo-menu-mobile{
+                width: 100%;
+                img{
+                    margin-inline: auto
+                }
+            }
+    
+            nav{
+                margin-top: 4rem;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    li{    
+                        a{
+                            padding: 1.6rem 1rem;
+                            border-radius: 4px;
+                            transition: background .1s;
+
+                            font-size: 1.6rem;
+                            color: #FFFFFF;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            &:hover{
+                                background: $overwatch----neutral-300;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .area-menu{
+                display: none;
+                margin-top: 0;
+                background: $neutral---300;
+                padding: 1.6rem 1rem;
+
+                &.active{
+                    display: block;
+                }
+                ul{
+                    gap: .6rem;
+                    li{
+                        a{
+                            padding: 1rem .6rem;
+                        }
+                    }
+                    .divider{
+                        margin: 2rem 0;
+                        height: 2px;
+                        width: 100%;
+                        background: $neutral---500;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(991px){
+        .left-area{
+            nav{
+                display: none;
+            }
+        }
+        .right-area{
+            .btn-mobile{
+                display: block;
+            }
+        }
+    }
+
+    @include responsive(560px){
+        height: 8rem;
+
+        .left-area{
+            .logo{
+                img{
+                    max-width: 6.943rem;
+                }
+            }
+        }
+        .right-area{
+            .btn{
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding-top: 9.6rem;
+    transform: translateY(-100%);
+    transition: transform .3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.active{
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
+    backdrop-filter: blur(12px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    .container{
+        @include flex(column, center, center);
+    }
+
+    .area-menu{
+        width: 100%;
+        padding-top: 3.8rem;
+        padding-bottom: 5.5rem;
+
+        
+        ul{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 2.8rem 3.2rem;
+
+            li a{
+                @include flex(column, center, center);
+                width: 17.9rem;
+                height: 17.9rem;
+
+                .image{
+                    @include flex(column, center, center);
+                    width: 6.94rem;
+                    height: 6.94rem;
+                    margin-bottom: .86rem;
+                }
+                span{
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 120%;
+                    text-align: center;
+                    color: #9D9D9D;
+                }                
+            }
+        }
+    }
+    .footer-menu{
+        width: 100%;
+        height: 7rem;
+        @include flex(row, center, center);
+        background: rgba(21, 23, 27, 0.7);
+
+        ul{
+            display: flex;
+            align-items: center;
+
+            li {
+                &:not(:first-child){
+                    margin-left: 6.4rem;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                        text-align: center;
+                        color: #FFFFFF;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.esportes{
+
+        .area-menu{
+            padding-top: 5.5rem;
+            padding-bottom: 9.3rem;
+
+            ul{
+                grid-template-columns: repeat(5, 1fr);
+                column-gap: 6.4rem;
+
+                li a{
+                    width: 100%;
+                    height: 23.7rem;
+
+                    .image{
+                        width: 17.4rem;
+                        height: 14.9rem;
+                        margin-bottom: 2.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menuOpened{
+    overflow: hidden;
+    header{
+        .menu-mobile{
+           display: block;
+
+           .nav-menu-mobile{
+                transform: translateX(0%);
+           }
+        }
+    }
+}
