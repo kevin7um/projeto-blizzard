@@ -25,4 +25,4 @@ Neste projeto, tivemos a oportunidade de dar uma nova vida ao site da Blizzard, 
 
 ## Agradecimentos
 
-Gostaríamos de expressar minha gratidão ao Codebost e ao instrutor do curso Will Moreira por fornecer as habilidades e o conhecimento necessários para realizar este projeto.
+Gostaría de expressar minha gratidão ao instrutor do curso Will Moreira por fornecer as habilidades e o conhecimento necessários para realizar este projeto.
