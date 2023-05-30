@@ -11,7 +11,7 @@ var slide_thumbnail = new Swiper(".slide-thumbnail", {
       direction: 'horizontal',
     },
     991:{
-      direction: 'vertical',
+      direction: 'vertical', 
     }
   }
 });
